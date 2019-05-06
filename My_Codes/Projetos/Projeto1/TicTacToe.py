@@ -6,7 +6,7 @@ print(tab)
 
 def display_board(board):
   mark_ = mark()
-  count = 0
+  count = 1
   print(mark_)
   end = False
   # end = endGame(board)
@@ -17,15 +17,13 @@ def display_board(board):
     print(' ' + board[3] + ' | ' + board[4] + ' | ' + board[5])
     print('-----------')
     print(' ' + board[0] + ' | ' + board[1] + ' | ' + board[2]) 
-    
-    
+        
     p = played(count)
-    # p = [posição, jogador]
     print('print de p: %s' %p)
-    if p[1] == mark_[0]:
-      board[p[0]] = p[1]
+    if   p[1] == mark_[0]:
+      board[p[0]-1] = p[1]
     elif p[1]== mark_[1]:
-      board[int(p[0])-1] = [p[1]]
+      board[p[0]-1] = p[1]
       
     print('----------------------------------')
     print('----------------------------------')
@@ -33,7 +31,6 @@ def display_board(board):
     print('print do tabuleiro: %s '%board)
     print('----------------------------------')
     print('----------------------------------')
-    # end = endGame(board)
     
 def mark():
   mark = ['X','O']
@@ -44,17 +41,15 @@ def played(vez):
   p2 = 'O'
   jp = []
   count = vez
-  if count % 2 != 0:
+  if count % 2 == 0:
     j = int(input('JOGADOR Nº 1\n Onde deseja jogar?'))
-    
     jp.append(j)
     jp.append(p1)
     print('print de j: %s'%j)
     print('Saida: %s' %jp)
     return jp
-  else:
+  elif count % 2 != 0:
     j = int(input('JOGADOR Nº 2\n Onde deseja jogar?'))
-    
     jp.append(j)
     jp.append(p2)
     print('print de j: %s'%j)
