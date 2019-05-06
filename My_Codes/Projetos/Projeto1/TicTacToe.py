@@ -45,7 +45,7 @@ def played(vez):
   jp = []
   count = vez
   if count % 2 != 0:
-    j = input('JOGADOR Nº 1\n Onde deseja jogar?')
+    j = int(input('JOGADOR Nº 1\n Onde deseja jogar?'))
     
     jp.append(j)
     jp.append(p1)
@@ -53,7 +53,7 @@ def played(vez):
     print('Saida: %s' %jp)
     return jp
   else:
-    j = input('JOGADOR Nº 2\n Onde deseja jogar?')
+    j = int(input('JOGADOR Nº 2\n Onde deseja jogar?'))
     
     jp.append(j)
     jp.append(p2)
