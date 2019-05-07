@@ -9,7 +9,7 @@ def display_board(board):
   print('|----------------------------------##----------------------------------|')
   mark_ = mark()
   count = 1
-  print(mark_)
+  # print(mark_)
   end = False
   while end == False:
     count +=1
@@ -34,6 +34,7 @@ def display_board(board):
   print('-------------------------------FIM DO JOGO------------------------------')
   print('|----------------------------------##----------------------------------|')
   print('|----------------------------------##----------------------------------|')
+  
 def mark():
   mark = ['X','O']
   return mark 
@@ -109,7 +110,7 @@ def endGame(board):
   elif board[6] == mark_[1] and board[4] == mark_[1] and board[2] == mark_[1]:
     print('-------JOGADOR Nº2 [O] É O VENCEDOR!----------') #Diagonal 2
     return True
-  return True
+  return False
   
 # Chamada inicial
 display_board(tab)
