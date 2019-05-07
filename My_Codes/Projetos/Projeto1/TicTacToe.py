@@ -11,7 +11,6 @@ def display_board(board):
   count = 1
   print(mark_)
   end = False
-  end = endGame(board)
   while end == False:
     count +=1
     print(' ' + board[6] + ' | ' + board[7] + ' | ' + board[8])
@@ -110,7 +109,7 @@ def endGame(board):
   elif board[6] == mark_[1] and board[4] == mark_[1] and board[2] == mark_[1]:
     print('-------JOGADOR Nº2 [O] É O VENCEDOR!----------') #Diagonal 2
     return True
-  return False
+  return True
   
 # Chamada inicial
 display_board(tab)
