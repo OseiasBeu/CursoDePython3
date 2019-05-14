@@ -9,12 +9,12 @@
 t = (1,2,3,4,4,4,4,4,4)
 print(type(t))
 
-print(t[2])
+print(t[0])
 
 #Métodos de tuplas
 t1 = t.index(2) #Passo o valor e ela me retorna a posição do valor
-print(t1)
+# print(t1)
 
 t2 = t.count(4) #Passo um elemento e ela me retornar a quantidade de repetições desse elemento
-print(t2)
+# print(t2)
 
