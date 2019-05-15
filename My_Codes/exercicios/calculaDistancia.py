@@ -30,12 +30,12 @@ class Line(object):
 
   def distace(self):
     d = (((self.coor1[1] - self.coor1[0])**2) + ((self.coor2[1] - self.coor2[0])**2))
-    print(d)
+    print('A distância dessa reta é de: %3.2f'%(d))
   
   
   def slope(self):
     m = (self.coor2[1] - self.coor1[1]) / (self.coor2[0] - self.coor1[0])
-    print(m)
+    print('O coeficiênte angular possuí: %3.2fº'%(m))
   
 li = Line((-2,3),(1,5))
 li.distace()
