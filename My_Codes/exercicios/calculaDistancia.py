@@ -29,12 +29,18 @@ class Line(object):
     print("Coordenadas capturadas!!!")
 
   def distace(self):
-    d = (((self.coor1[1] - self.coor1[0])**2) + ((self.coor2[1] - self.coor2[0])**2))
+    x1,y1 = self.coor1 #Desempacotamento de Tuplas
+    x2,y2 = self.coor2
+    d = ((x2-x1)**2 + (y2-y1)**2)**0.5
+    # d = (((self.coor1[1] - self.coor1[0])**2) + ((self.coor2[1] - self.coor2[0])**2))
     print('A distância dessa reta é de: %3.2f'%(d))
   
   
   def slope(self):
-    m = (self.coor2[1] - self.coor1[1]) / (self.coor2[0] - self.coor1[0])
+    x1,y1 = self.coor1 #Desempacotamento de Tuplas
+    x2,y2 = self.coor2
+    m = y2-y1 / x1-x2    
+    # m = (self.coor2[1] - self.coor1[1]) / (self.coor2[0] - self.coor1[0])
     print('O coeficiênte angular possuí: %3.2fº'%(m))
   
 li = Line((-2,3),(1,5))
